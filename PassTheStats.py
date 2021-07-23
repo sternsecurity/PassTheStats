@@ -1,6 +1,6 @@
 # Password Stats program
 # Created by Jon Sternstein @ Stern Security
-# Version 1.4
+# Version 1.4.1
 # Run this program on a file containing a list of usernames and passwords in the
 #    following format  [username]:[password], for example admin:Winter2019
 
@@ -50,7 +50,7 @@ blankpassword = []
 admin_accounts = []
 admins = ["sys", "adm", "ops"]
 
-program_info = "\nPasswords Stats v.1.4\n" \
+program_info = "\nPasswords Stats v.1.4.1\n" \
     "Developed by Stern Security\n" \
     "www.sternsecurity.com\n"
 
@@ -157,7 +157,7 @@ for password in passwords:
 c = Counter(passwords)
 
 # Printing output to screen and file
-outfile = 'PassTheStats-output-' + str(time.strftime('%H-%M-%S')) + '.txt'
+outfile = 'PassTheStats-output-' + str(time.strftime('%m-%d-%Y_%H-%M-%S')) + '.txt'
 f = open(outfile, 'w+')
 
 print(program_info)
