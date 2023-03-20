@@ -1,6 +1,6 @@
 # Password Stats program
 # Created by Jon Sternstein @ Stern Security
-# Version 1.4.1
+# Version 1.4.2
 # Run this program on a file containing a list of usernames and passwords in the
 #    following format  [username]:[password], for example admin:Winter2019
 
@@ -134,7 +134,7 @@ for password in passwords:
     l='0'
     #complexity.append('0000')
     # If string contains character that is not a word (letter), then it has special chars
-    if re.search('[\W]', password):
+    if re.search('[\W_]', password):
         s='1'
     # if the search contains a character that is a number
     if re.search('[\d]', password):
